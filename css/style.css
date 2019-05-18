@@ -3,6 +3,9 @@ body {
 				font-size: 14px;
 				color: #222;
 			}
+			img {
+				display: block;
+			}
 			header {
 				background-color: #333;
 				padding: 10px;
@@ -34,9 +37,19 @@ body {
 				text-decoration: none;
 				color: #fff;
 				display: block;
-				padding: 5px;
+				padding: 10px;
 			}
 			nav li a:hover {
 				color: #333;
 				background-color: #fff;
+			}
+			#noticias-destacadas img {
+				width: 100%;
+			}
+			#noticias-destacadas h2 {
+				background-color: #333;
+				color: #fff;
+				font-weight: 700;
+				padding: 20px;
+				font-size: 48px;
 			}
