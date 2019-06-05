@@ -6,7 +6,7 @@ body{
 	font-size: 14px;
 	color: #222;
 }
-img{
+img{ /*con esto se resuelve el tema de las imagenes flexibles*/
 	display: block;
 	width: 100%
 }
@@ -63,25 +63,26 @@ nav li a:hover{
 	justify-content: space-around; /* flex-start | center | flex-end | space-between | space-around */
 
 	border-bottom: solid 1px #DDD;
+	/*
+		- Version Extendida -
+		margin-top: 0;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 0;
+		
+		- Version Simplificada (top/right/bottom/left)
+	*/ 
 
-/*
-	-version extendida:
-	margin-top: 0;
-	margin-botto: 0;
-	margin-right: 20px;
-	margin-left: 20px;
+	margin: 0 20px;/*<--- Version Reducida (y/x)*/ 
 
-	-version simplificada (top/right/bottom/left)
-	margin: 0 20px 0 20px
-	*/
+	/*margin: 15px 20px 25px; <----- Version Mixta (top/x/bottom)*/
 
-	margin: 0 20px; /* - Version reducida (y/x) */
 
-	/* margin: 15px 20px 25px; - Version mixta (top/x/bottom) */
 }
 .noticia:last-child {
 	border: none;
 }
+
 .noticia-img {
 	width: 30%;
 }
@@ -107,11 +108,11 @@ nav li a:hover{
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
-footer {
+footer{
 	background-color: #333;
 	padding: 10px;
 	text-align: center;
-	color: #fff;
+	color: #FFF;
 	font-size: 12px;
 	margin-top: 10px;
 }
@@ -119,82 +120,89 @@ footer {
 #tabla-posiciones table,
 #tabla-posiciones tr,
 #tabla-posiciones th,
-#tabla-posiciones td{
+#tabla-posiciones td {
 	border: solid 1px #000;
 }
 */
-#tabla-posiciones table {
+#tabla-posiciones table{
 	margin: auto;
-	width: 60%
+	width: 60%;
 }
+
 #tabla-posiciones td,
-#tabla-posiciones th {
+#tabla-posiciones th{
 	padding: 15px;
 }
-#tabla-posiciones th {
+
+#tabla-posiciones th{
 	background-color: #FF0000;
 	color: #FFFFFF;
 	font-weight: 700;
 	font-size: 24px;
 }
-#tabla-posiciones td {
+#tabla-posiciones td{
 	background-color: #D9D9D9;
 	vertical-align: middle;
 }
-#tabla-posiciones tr {
+#tabla-posiciones tr{
 	border-bottom: solid 1px #A1A1A1;
 }
-#tabla-posiciones tr:last-child {
+#tabla-posiciones tr:last-child{
 	border: none;
 }
+
 #tabla-posiciones td:nth-of-type(odd){
 	font-weight: 700;
 	text-align: center;
 	font-size: 24px;
 }
-#tabla-posiciones td:nth-of-type(even) span {
+#tabla-posiciones td:nth-of-type(even) span{
 	font-weight: 700;
 	color: darkblue;
 }
-button {
+
+button{
 	display: none;
 }
 
-@media screen and (max-width: 767px) { /* <-- Hasta una tablet de 7' */
-	/* Regla que aplica en pantallas de hasta 768px de ancho */
-	nav {
+@media screen and (max-width: 767px){ /*<---- esto seria hasta una tabla 7'*/
+	/* Reglas que aplican en pantalla de hasta 768px de ancho */
+	nav{
 		display: none;
 		float: none;
 		clear: both;
 	}
-	nav li {
+	nav li{
 		display: block;
 		text-align: center;
 
 	}
-	.noticia {
+	.noticia{
 		flex-direction: column;
 	}
 	.noticia-img,
-	.noticia-txt {
-		width: 100%;
+	.noticia-txt{
+		width: 100%
 	}
-	button {
+	button{
 		display: block;
-		padding: 5px;
+		padding: 10px;
 		border: none;
 		background-color: transparent;
-		color: #fff;
+		color: #FFF;
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 1;
 		float: right;
 	}
-	button:focus + nav {
+	button:focus + nav{
+		color: red;
 		display: block;
 	}
 }
 
-@media screen and (max-width: 575px) { /* <-- Hasta un smartphone de 6' */
-
+@media screen and (max-width: 575px){ /* <---- Hasta un Smartphone de 6' */
+	/*header{
+		background-color: green;
+	}*/
 }
