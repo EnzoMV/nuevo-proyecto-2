@@ -1,0 +1,21 @@
+<h1>Aprendiendo JavaScript</h1>
+<script>
+	
+	//1) Introduccion
+
+	let nombre = prompt("Ingrese Nombre:")
+	let stock = prompt("Ingrese Stock:")
+	let precio = prompt("Ingrese Precio:")
+	let disponible = confirm("Esta disponible?:")
+
+	//2) Nudo
+	let precioFinal = precio * 1.21
+
+	//alert(nombre)
+	//console.log(precio)
+	//document.write("hay ### unidades de ### que valen $### c/u")
+
+	//3) Deselance 
+	document.write(`<p>Hay ${stock} unidades de <strong>${nombre}</strong> que valen ARS ${precioFinal} c/u</p>`)
+
+</script>
