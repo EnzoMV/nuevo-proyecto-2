@@ -1,21 +1,31 @@
-<h1>Aprendiendo JavaScript</h1>
+<h1>Aprendiendo JS</h1>
 <script>
-	
-	//1) Introduccion
+  
+  
+  let texto     = "Hola Mundo"
+  let entero    = 10
+  let decimal   = 12.3 
+  let booleano  = true
 
-	let nombre = prompt("Ingrese Nombre:")
-	let stock = prompt("Ingrese Stock:")
-	let precio = prompt("Ingrese Precio:")
-	let disponible = confirm("Esta disponible?:")
+  //1) Introduccion
+  let nombre      = prompt("Ingrese nombre:")
+  let stock       = prompt("Ingrese stock:")
+  let precio      = prompt("Ingrese precio:")
+  let disponible  = confirm("Esta disponible?")
 
-	//2) Nudo
-	let precioFinal = precio * 1.21
+  //2) Nudo
+  let precioFinal = precio * 1.21
 
-	//alert(nombre)
-	//console.log(precio)
-	//document.write("hay ### unidades de ### que valen $### c/u")
 
-	//3) Deselance 
-	document.write(`<p>Hay ${stock} unidades de <strong>${nombre}</strong> que valen ARS ${precioFinal} c/u</p>`)
+  //alert(nombre)
+  //console.log(precio)
+  
+  //3) Desenlace
+  document.write(`<p> Hay ${ stock } unidades de <strong> ${ nombre } </strong> que valen ${ precioFinal } c/u </p>`) 
+
+
+
+
+
 
 </script>
