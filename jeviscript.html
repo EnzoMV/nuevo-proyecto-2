@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>Kiosko "El JeviScript"</title>
+		<link rel="stylesheet" href="https://docs.google.com/uc?id=17C6A6tYbFc9esDbgo0Q-HjN2rNjvXbyc">
+	</head>
+	<body>
+		<h1>Kiosko <strong>El JeviScript</strong></h1>
+
+		<button>Nuevo Producto +</button>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Stock</th>
+					<th>Precio</th>
+					<th>Disponible</th>
+				</tr>
+			</thead>
+			<tbody id="productos">
+				<!-- ACÁ TIENEN QUE APARECER LOS PRODUCTOS -->
+			</tbody>
+		</table>
+
+		<script>
+			/*Manipulacion del DOM */
+			/*LAS VARIABLES GUARDAN DATOS Y REFERENCIAS */
+			let titulo = document.querySelector("h1") // <--- manipulacion indirecta
+			//3) Manipulacion del comportamiento
+
+				titulo.onclick = cambiarTitulo
+
+				document.querySelector("button").onclick = crearProducto // <---- Manipulación Directa
+
+			function cambiarTitulo(){
+							//1) Manipulacion de Contenido
+
+				titulo.innerText = "Almacen el TipoScript"
+
+				//2) Manipulacion de Estructura
+				titulo.style.color = "red"
+				titulo.style.fontFamily = "Tahoma"
+				titulo.style.backgroundColor = "rgb(23,24,25)"
+
+				titulo.title = "El mejor precio de la Web"
+			}
+
+			function crearProducto() {
+				// body...
+				debugger
+				  //1) Introduccion
+  				let nombre      = prompt("Ingrese nombre:")
+  				let stock       = prompt("Ingrese stock:")
+  				let precio      = prompt("Ingrese precio:")
+				let disponible  = confirm("Esta disponible?")
+
+  				//2) Nudo
+  				let precioFinal = precio * 1.21
+  				//3) Desenlace
+  				let fila = document.createElement("tr")
+
+  				let celda1 = document.createElement("td")
+  				let celda2 = document.createElement("td")
+  				let celda3 = document.createElement("td")
+  				let celda4 = document.createElement("td")
+
+  				celda1.innerText = nombre
+  				celda2.innerText = stock
+  				celda3.innerText = precioFinal
+  				celda4.innerText = disponible
+
+
+  				fila.appendChild(celda1)       // <----- append para anexar en el tr
+  				fila.appendChild(celda2)       // <----- append para anexar en el tr
+  				fila.appendChild(celda3)       // <----- append para anexar en el tr
+  				fila.appendChild(celda4)       // <----- append para anexar en el tr
+
+  				console.log(fila)
+
+  				document.querySelector("#productos").appendChild(fila)
+
+			}
+
+		</script>
+	</body>
+</html>
