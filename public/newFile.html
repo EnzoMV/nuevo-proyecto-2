@@ -114,29 +114,16 @@
 
   		let ajax = new XMLHttpRequest()
   		ajax.open("GET", "noticias.json")
-  		ajax.onload = function(){ //<-- Funcion Anonima
-
-        //aca hay que hacer algo con el JSON
-        if( ajax.status == 200){ //<-- Respuesta Exitosa!
-          //console.log( "Antes del parseo:" )
-          //console.log( ajax.response )
-
-          //console.log( "Despues del parseo:" )
-          //console.log( JSON.parse(ajax.response) )
-          let noticias = JSON.parse(ajax.response)
-
-          noticias.forEach(function(noticia){ //<-- Callback
-            console.log("Aca va una noticia:")
-              crearNoticia(noticia.titulo, noticia.autor, noticia.detalle, noticia.imagen)
-          }) 
-        }
+  		ajax.onload = function () { // <---- funcion anonima
+       //Aca hay que hacer algo con el evento
+       alert("si leen esto es porque se cargaron los datos") 
       }
   		ajax.send()
 
-  		//crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
-  		//crearNoticia(noticia2.titulo, noticia2.autor, noticia2.detalle, noticia2.imagen)
-  		//crearNoticia(noticia3.titulo, noticia3.autor, noticia3.detalle, noticia3.imagen)
-  		//crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
+  		crearNoticia(noticia1.titulo, noticia1.autor, noticia1.detalle, noticia1.imagen)
+  		crearNoticia(noticia2.titulo, noticia2.autor, noticia2.detalle, noticia2.imagen)
+  		crearNoticia(noticia3.titulo, noticia3.autor, noticia3.detalle, noticia3.imagen)
+  		crearNoticia(noticia4.titulo, noticia4.autor, noticia4.detalle, noticia4.imagen)
 
   		//Comportamiento
   		//links[0].onclick = validarLink
@@ -152,7 +139,7 @@
   			links[i].onclick = validarLink
   		}
 
-  		function validarLink(){ //<-- Funcion Nominada
+  		function validarLink(){
 			confirm("Esta seguro que desea irse?")
   		}
 
@@ -181,7 +168,36 @@
   			console.log( noticia )
 
   			document.querySelector("#ultimas-noticias .row").appendChild( noticia )
-    }
+
+  		}
+
   	</script>
   </body>
 </html>
+Contraer
+
+
+
+
+Entrada de mensaje
+
+
+Enviar mensaje a edd-m1-pwfe-06
+
+
+Archivos
+
+index.html
+smessina
+Hoy a la(s) 19:32
+Archivo privado
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
